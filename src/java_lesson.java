@@ -24,5 +24,9 @@ public class java_lesson {
 
         String all= String.join("/","S","M","l","XL");
         System.out.println(all);
+
+
+        greeting = greeting.substring(0,3) + "p!";
+        System.out.println(greeting);
     }
 }
