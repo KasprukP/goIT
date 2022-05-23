@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class java_lesson {
     public static void main(String[] args) {
         System.out.println("Hello ");
@@ -28,5 +30,9 @@ public class java_lesson {
 
         greeting = greeting.substring(0,3) + "p!";
         System.out.println(greeting);
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("What is your name?");
+        String name = in.nextLine();
     }
 }
