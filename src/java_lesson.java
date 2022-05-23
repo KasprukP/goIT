@@ -12,5 +12,17 @@ public class java_lesson {
 
         double z = Math.sqrt(4);
         System.out.println("Квадрат "+ z );
+
+        String greeting = "hello";
+        String s = greeting.substring(0,4);
+        System.out.println(s);
+
+        String expeletive = "Expeletive";
+        String PG13 = "Deleted";
+        String message = expeletive + PG13;
+        System.out.println(message);
+
+        String all= String.join("/","S","M","l","XL");
+        System.out.println(all);
     }
 }
