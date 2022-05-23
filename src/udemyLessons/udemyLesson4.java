@@ -1,7 +1,11 @@
 package udemyLessons;
 
 public class udemyLesson4 {
-    int id ;
-    String name;
-    int balance;
+    public static void main(String[] args) {
+
+
+        int id;
+        String name;
+        int balance;
+    }
 }
