@@ -1,3 +1,5 @@
+package java_Lessons;
+
 import java.io.Console;
 import java.util.Scanner;
 
