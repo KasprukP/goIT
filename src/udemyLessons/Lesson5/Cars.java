@@ -5,4 +5,10 @@ public class Cars {
         int result = a+b+c;
         return result;
     }
+    static class Test21{
+        public static void main(String[] args) {
+            Cars c = new Cars();
+            System.out.println(c.summa(3,4,5));
+        }
+    }
 }
