@@ -1,4 +1,4 @@
-package udemyLessons;
+package udemyLessons.Lesson5;
 
 public class Car {
     String color = "red";
