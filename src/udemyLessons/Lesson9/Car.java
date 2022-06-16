@@ -6,7 +6,7 @@ public class Car {
     static int count;
 
 
-    Car(String color, String engine) {
+     public Car (String color, String engine) {
         count++;
         this.color=color;
         this.engine=color;
