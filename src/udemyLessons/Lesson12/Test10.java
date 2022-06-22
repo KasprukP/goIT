@@ -2,9 +2,18 @@ package udemyLessons.Lesson12;
 
 public class Test10 {
     public static void main(String[] args) {
-        int a=40;
-        if (a<30)
-            System.out.println("a menshe 20");
-        
+        int salary = 500;
+        if (salary < 200) {
+            System.out.println("Z/P ochen nizka");
+        } else if (salary < 300) {
+            System.out.println("Z/P srednego razmera");
+
+        } else if (salary < 500) {
+            System.out.println("Z/P bolshaya");
+
+        } else {
+            System.out.println("Z/P SuPER");
+        }
+
     }
 }
