@@ -1,4 +1,4 @@
-package udemyLessons.Homework13;
+package udemyLessons.HomeworkLesson13;
 
 public class Month {
 }
@@ -15,7 +15,6 @@ class dayMonth {
             case 12:
                 System.out.println("В єтом месяце 31 день");
                 break;
-
             case 2:
                 System.out.println("В єтом месяце 28 дней");
                 break;
