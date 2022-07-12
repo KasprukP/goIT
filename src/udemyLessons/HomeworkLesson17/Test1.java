@@ -3,7 +3,7 @@ package udemyLessons.HomeworkLesson17;
 public class Test1 {
     public static boolean equality (StringBuilder s1, StringBuilder s2) {
 
-        return (s1.toString().equals(s2.toString()));
+        return (s1.toString().equalsIgnoreCase(s2.toString()));
     }
 
 
