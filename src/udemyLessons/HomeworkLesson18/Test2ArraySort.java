@@ -1,9 +1,7 @@
-package udemyLessonsHomeworkLesson18;
+package udemyLessons.HomeworkLesson18;
 
-import java.util.Arrays;
-
-public class Test2ArraySory {
-    public static void sort(int[] array) {
+public class Test2ArraySort {
+    public static int[] sort(int[] array) {
         int temp = 0;
         for (int i = 0; i < array.length; i++) {
             for (int j = i + 1; j < array.length; j++) {
@@ -14,11 +12,15 @@ public class Test2ArraySory {
                 }
             }
         }
-
+return array;
     }
 
     public static void main(String[] args) {
-        int [] massive = {1,4,2,6,4,8,2};
-        System.out.println(massive);
+        int [] massive = {1,3,5,7,9,2,4,6,8};
+
+        sort(massive);
+        for (int i=0;i<massive.length;i++){
+            System.out.print(massive[i]);
+        }
     }
 }
