@@ -18,14 +18,17 @@ public class ExonNames {
         return name.substring(0, 1).concat(name.substring(name.length() - 1)).substring(0, name.length() > 1 ? 2 : 1).toUpperCase();
 
     }
+
     public boolean isInvisibleName(String name) {
-        if (name.length() != 0) {
-            return true;
-        } else if (name.isEmpty()) {
+        if (name != null && !name.trim().isEmpty()) {
             return name.isEmpty();
+        } else if (name.length() != 0) {
+            return true;
         }
-        return name.trim().isEmpty();
+        return name.isEmpty();
+
     }
+
 
     //Test output
     public static void main(String[] args) {
