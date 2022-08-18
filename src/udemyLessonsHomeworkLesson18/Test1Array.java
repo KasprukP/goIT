@@ -5,7 +5,7 @@ public class Test1Array {
         for (int i = 0; i < array.length; i++) {
             int min = array[i];
             int min_i = i;
-            for (int j = i + 1; j < array.length; j++) ;
+            for (int j = i + 1; j < array.length; j++)
             {
 
                 if (array[j] < min) {
@@ -29,6 +29,8 @@ public class Test1Array {
 
     public static void main(String[] args) {
         int[] massive1 = {3,5,2,6,8,2,1,5,7};
+        for (int i=0;i< massive1.length;i++)
+sortirovka(massive1);
 
     }
 }
