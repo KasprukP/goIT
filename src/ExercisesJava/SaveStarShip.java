@@ -8,7 +8,17 @@ public class SaveStarShip {
             return -distance;
         }
     }
+    public String[] getPlanets(String galaxy) {
 
+        if (galaxy!=null) {
+            return new String[]{galaxy};
+
+
+
+        }
+
+        return new String[0];
+    }
 
             //Test output
             public static void main(String[] args) {
