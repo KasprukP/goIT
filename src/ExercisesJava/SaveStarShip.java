@@ -38,9 +38,9 @@ public class SaveStarShip {
     public int calculateFuelPrice(String fuel, int count) {
         if (fuel.equals("STAR100")) {
             return count * 70;
-        } else if (fuel.equals("START500")) {
+        } else if (fuel.equals("STAR500")) {
             return count * 120;
-        } else if (fuel.equals("START1000")) {
+        } else if (fuel.equals("STAR1000")) {
             return count * 200;
         } else if (fuel.equals(" ")) {
             return count * 50;
