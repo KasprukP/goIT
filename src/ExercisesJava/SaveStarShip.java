@@ -42,10 +42,10 @@ public class SaveStarShip {
             return count * 120;
         } else if (fuel.equals("STAR1000")) {
             return count * 200;
-        } else if (fuel.equals(" ")) {
-            return count * 50;
+        } else {
+
         }
-        return count;
+        return count*50;
     }
 
 
