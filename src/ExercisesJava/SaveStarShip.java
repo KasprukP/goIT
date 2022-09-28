@@ -1,5 +1,7 @@
 package ExercisesJava;
 
+import java.util.Arrays;
+
 public class SaveStarShip {
     public int calculateDistance(int distance) {
         if (distance > 0) {
@@ -33,14 +35,34 @@ public class SaveStarShip {
         }
     }
 
-
-
-    //Test output
-    public static void main(String[] args) {
-        SaveStarShip ship = new SaveStarShip();
-
-        //Should be 10
-        System.out.println(ship.calculateDistance(-10));
+    public int calculateFuelPrice(String fuel, int count) {
+        if (fuel.equals("STAR100")) {
+            return count * 70;
+        } else if (fuel.equals("START500")) {
+            return count * 120;
+        } else if (fuel.equals("START1000")) {
+            return count * 200;
+        } else if (fuel.equals(" ")) {
+            return count * 50;
+        }
+        return count;
     }
-}
 
+
+//Test output
+public static void main(String[] args) {
+    SaveStarShip ship = new SaveStarShip();
+
+    //Should be 10
+    System.out.println(ship.calculateDistance(-10));
+
+    //Should be [Fobius, Demius]
+    System.out.println(Arrays.toString(ship.getPlanets("DangerBanger")));
+
+    //Should be Earth
+    System.out.println(ship.choosePlanet(10));
+
+    //Should be 700
+    System.out.println(ship.calculateFuelPrice("STAR100", 10));
+}
+}
