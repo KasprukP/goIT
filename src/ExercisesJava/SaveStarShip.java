@@ -94,9 +94,9 @@ public class SaveStarShip {
 return " ";
     }
 
-}
 
-    }
+
+
 //Test output
 public static void main(String[]args){
         SaveStarShip ship=new SaveStarShip();
