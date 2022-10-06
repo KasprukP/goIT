@@ -84,22 +84,35 @@ public class SaveStarShip {
     }
 
     public String getMyPrizes(int ticket) {
+        String prize = "";
         if (ticket % 10 == 0) {
-            return "crystall";
-        } else if (ticket % 10 == 7) {
-            return "chip";
-        } else if (ticket > 200) {
-            return "coin";
+            prize += "crystall";
         }
-return " ";
+        if (ticket % 10 == 7) {
+            prize += "chip";
+        }
+        if (ticket > 200) {
+            prize += "coin";
+        }
+        return prize;
+    }
+
+    public boolean isHangarOk(int side1, int side2, int price) {
+
+        int lmax = Math.max(side1, side2);
+        int lmin = Math.min(side1, side2);
+        boolean b1 = side1 * side2 >= 1500;
+        boolean b2 = price / (side1 * side2) <= 1000;
+        boolean b3 = lmin * 2 >= lmax;
+        return b1 && b2 && b3;
+
     }
 
 
-
-
-//Test output
-public static void main(String[]args){
-        SaveStarShip ship=new SaveStarShip();
+    //Test output
+    //Test output
+    public static void main(String[] args) {
+        SaveStarShip ship = new SaveStarShip();
 
         //Should be 10
         System.out.println(ship.calculateDistance(-10));
@@ -111,7 +124,7 @@ public static void main(String[]args){
         System.out.println(ship.choosePlanet(10));
 
         //Should be 700
-        System.out.println(ship.calculateFuelPrice("STAR100",10));
+        System.out.println(ship.calculateFuelPrice("STAR100", 10));
 
         //Should be 60
         System.out.println(ship.roundSpeed(55));
@@ -122,5 +135,11 @@ public static void main(String[]args){
         //Test stdin data - 1 3 5.
         //Console ouput should be 3.5
         ship.calculateMaxPower();
-        }
-        }
+
+        //Should be "crystall coin"
+        System.out.println(ship.getMyPrizes(250));
+
+        //Should be true
+        System.out.println(ship.isHangarOk(60, 120, 2325600));
+    }
+}
