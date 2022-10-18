@@ -5,50 +5,51 @@ import java.util.List;
 
 public class NumberTranslator {
     public int translate(String romanNumber) {
-        int number = 6;
 
 
-        switch (number) {
+        switch (romanNumber.toUpperCase().trim()) {
 
 
-            case 1:
-                romanNumber.replace("I", "1");
-                break;
-            case 2:
-                romanNumber.replace("II", "2");
-                break;
-            case 3:
-                romanNumber.replace("III", "3");
-                break;
-            case 4:
-                romanNumber.replace("IV", "4");
-                break;
-            case 5:
-                romanNumber.replace("V", "5");
-                break;
-            case 6:
-                romanNumber.replace("VI", "6");
-                break;
-            case 7:
-                romanNumber.replace("VII", "7");
-                break;
-            case 8:
-                romanNumber.replace("VIII", "8");
-                break;
-            case 9:
-                romanNumber.replace("IX", "9");
-                break;
-            case 10:
-                romanNumber.replace("X", "10");
-                break;
-            case 11:
-                romanNumber.replace("XI", "11");
-                break;
-            case 12:
-                romanNumber.replace("XII", "12");
-                break;
+            case "I":
+                return 1;
+
+            case "II":
+                return 2;
+
+            case "III":
+                return 3;
+
+            case "IV":
+                return 4;
+
+            case "V":
+                return 5;
+
+            case "VI":
+                return 6;
+
+            case "VII":
+               return 7;
+
+            case "VIII":
+                return 8;
+
+            case "IX":
+                return 9;
+
+            case "X":
+              return 10;
+
+            case "XI":
+                return 11;
+
+            case "XII":
+                return 12;
+            default:
+                return -1;
+
+
         }
-        return number;
     }
 }
 
