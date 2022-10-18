@@ -5,11 +5,9 @@ import java.util.Arrays;
 public class UberShop {
     public void printPrices(float[] prices) {
 
-
-        for (int k = 0; k < prices.length;k++);{
-            System.out.println(prices[k] +  );
+        for (int i = 0; i < prices.length; i++){
+            System.out.println(prices[i] + " jup.");
         }
-
     }
 
     //Test output
