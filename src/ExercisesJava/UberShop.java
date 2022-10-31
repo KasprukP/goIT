@@ -1,5 +1,6 @@
 package ExercisesJava;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class UberShop {
@@ -18,26 +19,27 @@ public class UberShop {
     }
 
     public int[] findMinMaxPrices(int[] prices) {
-        int max = 0;
-        int min = 0;
-        for (int i = 0; i < prices.length; i++) {
-            if (i == 0) {
+        if (prices.length == 0) {
+            return new int[]{};
+        }
+        int min = prices[0];
+        int max = prices[0];
+
+        for (int i = 1; i < prices.length; i++) {
+            if (min > prices[i]) {
                 min = prices[i];
+            }
+            if (max < prices[i]) {
                 max = prices[i];
-            } else {
-                if (prices[i] < min) {
-                    min = prices[i];
-                }
-                if (prices[i] > max) {
-                    max = prices[i];
-                }
             }
         }
-        int[] array = {
-                min,
-                max
-        };
-        return array;
+
+        if (min == max) {
+            return new int[]{min};
+        }
+
+
+        return new int[]{min, max};
     }
 
 
@@ -46,7 +48,7 @@ public class UberShop {
         UberShop shop = new UberShop();
 
         //Should be [50, 1500]
-        int[] prices = new int[]{100, 1500, 300, 50};
+        int[] prices = new int[]{ };
         int[] minMax = shop.findMinMaxPrices(prices);
         System.out.println(Arrays.toString(minMax));
     }
