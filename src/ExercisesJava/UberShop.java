@@ -42,16 +42,28 @@ public class UberShop {
         return new int[]{min, max};
     }
 
+    public int getMinPriceCount(int[] prices) {
+
+        if (prices.length == 0) {
+            return 0;
+
+        }
+        for (int i = 0; i < prices.length; i++) {
+            if (prices.length == prices.length) {
+                return prices.length;
+
+            }
+        }
+        return 1;
+    }
 
     //Test output
     public static void main(String[] args) {
         UberShop shop = new UberShop();
 
         //Should be [50, 1500]
-        int[] prices = new int[]{ };
-        int[] minMax = shop.findMinMaxPrices(prices);
-        System.out.println(Arrays.toString(minMax));
+        int[] prices = new int[]{100, 1500, 300, 50, 10, 10, 70};
+        System.out.println(shop.getMinPriceCount(prices)); //Should be 2
     }
-
 }
 
